@@ -5,12 +5,15 @@ import "./index.css";
 
 import LandingPage from "./pages/LandingPage";
 import Login from "./pages/Login";
-import Signup from "./pages/Signup"
+import Signup from "./pages/Signup";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <LandingPage />,
+
   },
   {
     path: "/login",
@@ -24,6 +27,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <Header />
     <RouterProvider router={router} />
+    <Footer />
   </React.StrictMode>
 );
